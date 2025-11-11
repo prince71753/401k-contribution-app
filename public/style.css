@@ -1,0 +1,149 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --muted:#6c7682;
+  --text:#1b1e2d;
+  --primary:#008481;
+  --border:#dbdfe2;
+  --heading:#022a4d;
+}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Poppins, Arial, sans-serif}
+header{padding:24px 16px;text-align:center}
+h1{margin:0;font-size:28px;color:var(--heading)} .subtitle{color:var(--muted);margin-top:6px}
+.container{max-width:960px;margin:0 auto;padding:16px;display:grid;gap:16px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.row > label{display:flex;gap:6px;align-items:center}
+.controls{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.hidden{display:none}
+.radio{display:flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid var(--border);border-radius:10px;cursor:pointer;background:#fff}
+.status{margin-left:8px;color:var(--muted)}
+.grid.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.stat{padding:10px;border:1px solid var(--border);border-radius:10px;background:#fff}
+.stat .label{color:var(--muted);font-size:12px}
+.stat .value{font-size:18px;margin-top:4px}
+.projection{margin-top:10px;display:grid;gap:8px}
+footer{padding:24px 16px;text-align:center;color:var(--muted)}
+
+/* shorter number boxes */
+.hui-input.short { width: 150px; }
+
+/* limit note */
+.note {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--muted);
+}
+/* prefix wrapper for currency inputs */
+.input-prefix { position: relative; display: inline-block; }
+.input-prefix .prefix {
+  position: absolute; left: 8px; top: 50%; transform: translateY(-50%);
+  color: var(--muted); pointer-events: none;
+}
+.hui-input.with-prefix { padding-left: 22px; } /* ensures $ stays visible on focus */
+
+/* subtle turquoise hints */
+:root{
+  --bg:#f7f8fa;
+  --card:#ffffff;
+  --muted:#6c7682;
+  --text:#1b1e2d;
+  --primary:#008481;         /* existing Human Interest teal */
+  --primary-200:#8adad5;     /* light teal accent */
+  --primary-600:#166367;     /* darker teal for hovers/borders */
+  --border:#dbdfe2;
+  --heading:#022a4d;
+}
+
+/* header accent line */
+header { position: relative; }
+header::after {
+  content:""; display:block; height:4px; width:120px; margin:12px auto 0;
+  background: linear-gradient(90deg, var(--primary), var(--primary-200));
+  border-radius: 999px;
+}
+
+/* card top border hint */
+.card { border-top: 3px solid rgba(0,132,129,.12); }
+
+/* section headings get a teal stripe */
+.card > h2 {
+  border-left: 6px solid rgba(0,132,129,.25);
+  padding-left: 10px;
+}
+
+/* radios get a faint teal when selected */
+.radio input[type="radio"]:checked + span,
+.radio input[type="radio"]:checked ~ * {
+  color: var(--heading);
+}
+.radio {
+  box-shadow: 0 0 0 0 rgba(0,132,129,0);
+  transition: box-shadow .15s ease;
+}
+.radio:has(input[type="radio"]:checked) {
+  box-shadow: 0 0 0 3px rgba(0,132,129,.12);
+}
+
+/* Primary (filled) button = teal */
+.hui-button-default {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+}
+.hui-button-default:hover {
+  background: var(--primary-600);
+  border-color: var(--primary-600);
+}
+.hui-button-default:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+/* Secondary (outline) button = teal outline/text */
+.hui-button-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+.hui-button-secondary:hover {
+  color: var(--primary-600);
+  border-color: var(--primary-600);
+  background: rgba(0,132,129,.08);
+}
+
+/* Accessible focus ring */
+.hui-button-default:focus-visible,
+.hui-button-secondary:focus-visible {
+  outline: 3px solid rgba(0,132,129,.35);
+  outline-offset: 2px;
+}
+
+/* Assumptions panel */
+.card.assumptions { border-top-color: rgba(0,132,129,.25); }
+.assumption-list,
+.fineprint-list { 
+  margin: 8px 0 0; padding-left: 18px; 
+  color: var(--text); 
+}
+.assumption-list li { 
+  margin: 6px 0; 
+}
+.fineprint {
+  margin-top: 10px;
+  border-top: 1px dashed var(--border);
+  padding-top: 10px;
+}
+.fineprint > summary {
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 600;
+}
+.fineprint[open] > summary { color: var(--heading); }
+.fineprint-list li {
+  margin: 6px 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
