@@ -1,10 +1,10 @@
-# 401(k) Contribution App (Themed)
+# 401(k) Contribution App
 
 Single-page app to manage 401(k) contributions with a tiny Node http backend (no dependencies).
 The UI uses the uploaded theme CSS so it visually matches the target site.
 
 ## Instructions
-1) Install Node.js (pick one)
+1) Install Node.js (18+)
 
 macOS (Homebrew):
 ```bash
@@ -21,6 +21,21 @@ sudo apt install -y nodejs npm
 node -v && npm -v
 ```
 
+Windows (PowerShell)
+Using winget (Windows 10/11)
+```bash
+winget install OpenJS.NodeJS.LTS
+node -v
+npm -v
+```
+
+Using Chocolatey
+```bash
+choco install nodejs-lts -y
+node -v
+npm -v
+```
+
 Alternative (cross-platform) using nvm:
 ```bash
 # install nvm (follow on-screen output to source your shell profile)
@@ -34,7 +49,7 @@ node -v && npm -v
 git clone <YOUR_REPO_URL> 401k-contribution-app
 cd 401k-contribution-app
 
-# If package.json has a start script (recommended)
+# Run (recommended)
 npm start
 
 # OR run directly with Node if you prefer
@@ -42,18 +57,6 @@ npm start
 ```
 
 Now open: http://localhost:3000
-
-
-## Project Structure Overview
-.
-├─ server.js                  # Node HTTP server (ESM)
-├─ package.json               #  start script, package info
-├─ data/
-│  └─ settings.json           # mock database
-└─ public/
-   ├─ index.html              # UI
-   ├─ theme.css               # styles (teal theme + sliders/buttons)
-   └─ app.js                  # frontend logic (fetches APIs)
 
 ## Notes
 - No `node_modules` required.
