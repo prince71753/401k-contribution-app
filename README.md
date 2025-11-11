@@ -28,7 +28,7 @@ node -v
 npm -v
 ```
 
-Using Chocolatey
+Windows Using Chocolatey
 ```bash
 choco install nodejs-lts -y
 node -v
@@ -46,7 +46,7 @@ node -v && npm -v
 2) Clone and run
 ```bash
 git clone <YOUR_REPO_URL> 401k-contribution-app
-cd 401k-contribution-app
+cd 401k-contribution-app # cd into where ever you downloaded the repo to
 
 # Run (recommended)
 npm start
