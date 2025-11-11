@@ -1,7 +1,6 @@
 # 401(k) Contribution App
 
-Single-page app to manage 401(k) contributions with a tiny Node http backend (no dependencies).
-The UI uses the uploaded theme CSS so it visually matches the target site.
+Single-page app to manage 401(k) contributions with a tiny Node http backend (no dependencies). Scraped some CSS from Human Interest front page for style continuity.
 
 ## Instructions
 1) Install Node.js (18+)
